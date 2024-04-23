@@ -1,0 +1,300 @@
+/*
+Author: Jay-Dee Anderson
+Date: January 17, 2024
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, ul, article {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+
+/* Style rules for mobile viewport */
+
+/* Hide tab-desk class */
+
+.mobile {
+	display: block;
+}
+
+.tablet-desktop, #menu-links {
+    display: none;
+}
+
+/* Style rules for header content */
+
+
+header {
+		text-align: center;
+		font-size: 1.0em;
+		overflow: hidden;
+		color: #fff;
+}
+
+.hero-header {
+	/*URL and center image */
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0 , 0.2)), url(https://upload.wikimedia.org/wikipedia/commons/1/14/Wikivoyage_page_banner_ocean_horizon_bright.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+h1 {
+	font-family: 'Arial CE', sans-serif;
+    font-style: normal;
+	padding: 1%;
+	font-size: 3.0em;
+	color: #7FBD32;
+}
+	
+
+h3 {
+	font-size: 1.4em;
+    font-style: italic;
+	padding: 1%;
+	font-family: 'Arial CE', sans-serif;
+	color: #093426;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+
+/* Style rules for navigation area */
+
+/* Style rules for hamburger menu */
+.mobile-nav a {
+	color: #000;
+	font-family: 'Arial', sans-serif;
+	text-align: center;
+	font-size: 1.5em;
+	text-decoration: none;
+	padding: 3%;
+	display: block;
+}
+
+.mobile-nav a.menu-icon {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+nav li a {
+    display: block;
+    color: #000;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+/* Style rules for main content */
+
+main {
+	padding: 2%;	
+	background-color: #E7F3EF;
+}
+
+main p {
+	font-size: 1.2em;
+	font-family: 'Arial Light', sans-serif;
+
+}
+
+article {
+	padding: 2%;
+}
+
+article h4 {
+	text-align: left;
+}
+
+/* Style rules for footer content */
+footer {
+    text-align: center;
+	font-family: 'Arial CE', sans-serif;
+    font-size: 0.75em;
+    background-color: #093426;
+    color: #448D76;
+    padding: 1% 0;
+}
+
+footer a {
+    color: #448D76;
+    text-decoration: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 600px), print {
+ 
+    /* Tablet Viewport: Show tab-desk class, hide tel-link class */
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile, .mobile-nav, .mobile-contact {
+        display: none;
+    }
+    
+    /* Tablet Viewport: Style rules for nav area */
+	nav {
+	padding: 1%;
+	margin-bottom: 0%;
+	background-color: #448D76;
+	}
+
+	nav ul {
+	list-style-type: none;
+	text-align: center;
+	}
+	
+    nav li {
+        font-size: 1em;
+		font-family: 'Arial CE', sans-serif;
+        display: inline-block;
+        font-size: 1.25em;
+		border-right: 1px solid #000;
+		
+    }
+    
+    nav li a {
+        padding: 0.85em;
+    }
+    
+    /* Tablet Viewport: Style rule for main content */
+    .map {
+        width: 525px;
+        height: 450px;
+    }
+	
+	.grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 0%;
+    }
+    
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 900px), print {
+    
+    /* Desktop Viewport: Style rules for nav area */
+    nav li {
+        font-size: 1.25em;
+		font-family: 'Arial CE', sans-serif;
+    }
+    
+    nav li a {
+        padding: 1.0em 2.0em;
+		transition: 0.3s;
+    }
+    
+    nav li a:hover {
+        color: #000;
+        background-color: #79BEA8;
+		transform: scale(1.1);
+	}
+  }  
+
+/* Desktop Viewport: Style rules for main content */
+	article h5 {
+		font-size: 2.5em;
+		color: #23483C;
+		font-family: 'Arial CE', sans-serif;
+	}
+	
+	article h4 {
+			font-size: 1.5em;
+			font-family: 'Arial CE', sans-serif;
+	}
+		
+	article ul {
+		margin-left: 0.5%;
+		font-family: 'Arial Light', sans-serif;
+	}
+	article li {
+		margin-left: 0.5%;
+		margin-bottom: 1em; /* Adds 1 unit of space after each paragraph */
+		font-family: 'Arial Light', sans-serif;
+		list-style-type: circle;
+	}
+
+	/* Sliding Animation */
+	.slide-right {
+		width: 100%;
+		margin-left: 0%;
+		overflow: hidden;
+	}
+	
+	.slide-right {
+	animation: 0.5s slide-right forwards;
+	-webkit-animation: 0.5s slide-right forwards;
+	transform:translateX(-100%);
+	}
+	
+	@-webkit-keyframes slide-right {
+		to {
+			transform:translateX(0);
+		}
+	}
+	
+	@keyframes slide-right {
+		to {
+			transform:translateX(0);
+		}
+	}
+	
+	/* Social Media Icons */
+	.social {
+		align-items: center;
+		padding: 0%;
+	}
+	
+	.social img {
+		display: inline-block;
+		padding: 0.25%;
+	}
+	
+	/* Contact Form */
+	.contact-form input, textarea {
+		justify-content: space-between;
+		display: block;
+		align-items: center;
+		width: 30%;
+		padding: 20px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		margin-top: 6px;
+		margin-bottom: 16px;
+		resize: none;
+	}
+	
+	/* Submit Button */
+	
+	.btn {
+		background-color: #448D76;
+		color: white;
+		padding: 12px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: 0.3s
+	}
+	
+	.btn:hover {
+		background-color: #79BEA8;
+	}
+	
+	/* Contact Header */
+	h7 {
+	font-family: 'Arial CE', sans-serif;
+	font-size: 2.5em;
+	color: #23483C;
+	}
+	
